@@ -744,7 +744,7 @@ widget.innerHTML=`
 #apl-chat{position:fixed;bottom:20px;right:20px;z-index:999;font-family:'Inter',sans-serif}
 #apl-toggle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a2a3a,#0e1e2e);border:2px solid rgba(107,197,173,.2);cursor:pointer;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4),0 0 20px rgba(107,197,173,.1);transition:transform .3s,box-shadow .3s;position:relative}
 #apl-toggle:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(0,0,0,.5),0 0 30px rgba(107,197,173,.2)}
-#apl-toggle img{width:100%;height:100%;object-fit:cover;object-position:top;filter:drop-shadow(0 0 6px rgba(255,255,255,.25))}
+#apl-toggle img{width:100%;height:100%;object-fit:cover;object-position:top}
 #apl-toggle .badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;background:#6BC5AD;border-radius:50%;border:2px solid #050510;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
 #apl-hint{position:absolute;bottom:80px;right:0;background:rgba(20,24,40,.95);border:1px solid rgba(107,197,173,.15);border-radius:16px 16px 4px 16px;padding:10px 16px;font-size:13px;color:rgba(255,255,255,.8);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:hintBounce 2s ease-in-out infinite;pointer-events:none}
@@ -761,7 +761,7 @@ widget.innerHTML=`
 #apl-messages{flex:1;overflow-y:auto;padding:16px 20px;max-height:320px}
 .apl-msg{display:flex;gap:8px;margin-bottom:16px;animation:msgIn .3s ease}
 @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.apl-msg.bot .avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;filter:drop-shadow(0 0 4px rgba(255,255,255,.2))}
+.apl-msg.bot .avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0}
 .apl-msg .bubble{max-width:260px;padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.6}
 .apl-msg.bot .bubble{background:rgba(107,197,173,.1);border:1px solid rgba(107,197,173,.1);color:rgba(255,255,255,.8);border-top-left-radius:4px}
 .apl-msg.user{flex-direction:row-reverse}
