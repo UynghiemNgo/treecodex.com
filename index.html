@@ -695,7 +695,7 @@ section{position:relative;z-index:1}
     </div>
     <div class="footer-col"><h4>Product</h4><a href="#story">How It Works</a><a href="#live">Live Feed</a><a href="#roles">Roles</a><a href="#download">Early Access</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
-    <div class="footer-col"><h4>Contact</h4><a href="mailto:uynghiem@earthsama.com">uynghiem@earthsama.com</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="contact.html">Get in Touch</a><a href="mailto:uynghiem@earthsama.com">uynghiem@earthsama.com</a></div>
   </div>
   <div class="footer-bottom">&copy; 2026 TreeCodex. All rights reserved.</div>
 </footer>
@@ -718,6 +718,169 @@ const co=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const
 document.querySelectorAll('.stat-number').forEach(el=>co.observe(el));
 addEventListener('scroll',()=>{const s=scrollY;document.querySelectorAll('.floating-element').forEach((el,i)=>{el.style.transform=`translateY(${s*(.015+i*.012)}px)`});document.querySelectorAll('.glow-orb').forEach((el,i)=>{el.style.transform=`translateY(${s*(.02+i*.008)}px)`})});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+
+// ── Apl De Ap Chat Widget ──
+(function(){
+const expressions={idle:'characters/Apldeap_Exp1.png',greeting:'characters/Apldeap_Exp3.png',thinking:'characters/Apldeap_Exp9.png',pointing:'characters/Apldeap_Exp7.png',excited:'characters/Apldeap_Exp6.png',confused:'characters/Apldeap_Exp8.png',cool:'characters/Apldeap_Exp10.png'};
+
+const qaData=[
+  {q:/what is treecodex|what does treecodex do/i,a:"TreeCodex connects you directly to planters on the ground in the Philippines. You calculate your carbon footprint, fund a GPS-verified mangrove tree, and watch a real person plant it — with photo proof and coordinates you can actually visit! 🌱",exp:'excited'},
+  {q:/how.*(work|plant|tree)/i,a:"Simple! 1) Calculate your flight or activity carbon. 2) Pick a mangrove project in Palawan or Boracay. 3) Fund a tree. 4) A planter puts it in the ground and submits GPS proof. 5) The NGO verifies it. 6) Your tree gets a permanent ID and shows up in your catalog forever! 📍",exp:'pointing'},
+  {q:/money|cost|price|pay|split/i,a:"90% of your payment goes directly to the NGO and their field team — the people doing the actual work. Planters are paid 20% above local market wages. Only 10% keeps TreeCodex running. No middlemen, no hidden fees. Trees start at around $3.50-$4.20 each! 💚",exp:'cool'},
+  {q:/where|country|location|philippines|palawan|boracay/i,a:"We're planting in the Philippines! Three amazing locations: Sabang Mangrove Forest in Palawan (UNESCO buffer zone), Bakhawan Eco-Park near Boracay (220 hectares!), and Silonay Conservation Area in Mindoro. All real, GPS-verified projects! 🇵🇭",exp:'excited'},
+  {q:/ngo|partner|organization/i,a:"We work with verified NGOs who manage the planting projects and field teams. NGOs set their own tree prices, manage planters, and verify every proof submission. Want to partner? Email uynghiem@earthsama.com! 🌍",exp:'pointing'},
+  {q:/enterprise|company|business|esg|bulk/i,a:"Companies can bulk-purchase trees for ESG reporting, team offsetting, and sustainability goals. Each tree is individually tracked with GPS and CO₂ data — perfect for compliance reports. Hit up uynghiem@earthsama.com for enterprise plans! 🏢",exp:'cool'},
+  {q:/carbon|co2|emission|flight|offset/i,a:"We use ICAO-certified data covering 30,000+ flight routes and 4 cabin classes. Enter your route, get your CO₂ impact in seconds. Then offset it by funding real mangrove trees — they sequester 3-5x more carbon than regular forests! ✈️🌿",exp:'thinking'},
+  {q:/app|download|ios|android|when/i,a:"We're in development right now and launching soon! Want early access? Email uynghiem@earthsama.com with 'Early Access' in the subject and you'll be first to try it! 🚀",exp:'excited'},
+  {q:/hi|hello|hey|kumusta|mabuhay|sup/i,a:"Kumusta ka! Welcome to TreeCodex! I'm Apl — ask me anything about how we're planting real mangrove trees in the Philippines. What do you want to know? 🤙",exp:'greeting'},
+  {q:/thank|thanks|salamat/i,a:"Salamat din! Happy to help. If you want to get involved, just email uynghiem@earthsama.com. Together we can make a real difference — one tree at a time! 🌳✨",exp:'greeting'},
+  {q:/blockchain|crypto|nft|token/i,a:"No blockchain, no crypto, no NFTs. Just real trees, real planters, real GPS coordinates. We keep it simple — fiat payments via Stripe, transparent 90/10 split. The planet doesn't need another token, it needs more trees! 🌱",exp:'cool'},
+];
+
+const widget=document.createElement('div');
+widget.id='apl-chat';
+widget.innerHTML=`
+<style>
+#apl-chat{position:fixed;bottom:20px;right:20px;z-index:999;font-family:'Inter',sans-serif}
+#apl-toggle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a2a3a,#0e1e2e);border:2px solid rgba(107,197,173,.2);cursor:pointer;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4),0 0 20px rgba(107,197,173,.1);transition:transform .3s,box-shadow .3s;position:relative}
+#apl-toggle:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(0,0,0,.5),0 0 30px rgba(107,197,173,.2)}
+#apl-toggle img{width:100%;height:100%;object-fit:cover;object-position:top}
+#apl-toggle .badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;background:#6BC5AD;border-radius:50%;border:2px solid #050510;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
+#apl-hint{position:absolute;bottom:80px;right:0;background:rgba(20,24,40,.95);border:1px solid rgba(107,197,173,.15);border-radius:16px 16px 4px 16px;padding:10px 16px;font-size:13px;color:rgba(255,255,255,.8);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:hintBounce 2s ease-in-out infinite;pointer-events:none}
+@keyframes hintBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+#apl-panel{display:none;position:absolute;bottom:84px;right:0;width:360px;max-height:500px;background:rgba(12,16,28,.97);border:1px solid rgba(107,197,173,.12);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden;flex-direction:column;backdrop-filter:blur(20px)}
+#apl-panel.open{display:flex}
+#apl-header{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.06)}
+#apl-header img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(107,197,173,.2)}
+#apl-header .info{flex:1}
+#apl-header .name{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#fff}
+#apl-header .status{font-size:11px;color:#6BC5AD}
+#apl-close{background:none;border:none;color:rgba(255,255,255,.4);font-size:20px;cursor:pointer;padding:4px 8px}
+#apl-close:hover{color:#fff}
+#apl-messages{flex:1;overflow-y:auto;padding:16px 20px;max-height:320px}
+.apl-msg{display:flex;gap:8px;margin-bottom:16px;animation:msgIn .3s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.apl-msg.bot .avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0}
+.apl-msg .bubble{max-width:260px;padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.6}
+.apl-msg.bot .bubble{background:rgba(107,197,173,.1);border:1px solid rgba(107,197,173,.1);color:rgba(255,255,255,.8);border-top-left-radius:4px}
+.apl-msg.user{flex-direction:row-reverse}
+.apl-msg.user .bubble{background:rgba(90,159,212,.15);border:1px solid rgba(90,159,212,.1);color:rgba(255,255,255,.8);border-top-right-radius:4px}
+#apl-suggestions{padding:0 20px 12px;display:flex;flex-wrap:wrap;gap:6px}
+.apl-sug{padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;font-size:11px;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s}
+.apl-sug:hover{background:rgba(107,197,173,.1);border-color:rgba(107,197,173,.2);color:rgba(255,255,255,.8)}
+#apl-input-wrap{padding:12px 16px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:8px}
+#apl-input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:8px 14px;color:#fff;font-size:13px;font-family:'Inter',sans-serif;outline:none}
+#apl-input:focus{border-color:rgba(107,197,173,.3)}
+#apl-input::placeholder{color:rgba(255,255,255,.25)}
+#apl-send{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6BC5AD,#5EBE9A);border:none;color:#050510;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+#apl-send:hover{transform:scale(1.1)}
+@media(max-width:480px){#apl-panel{width:calc(100vw - 32px);right:-4px;bottom:80px}}
+</style>
+
+<div id="apl-hint">Ask me about TreeCodex! 🌱</div>
+<div id="apl-toggle" onclick="aplToggle()">
+  <img src="characters/Apldeap_Exp3.png" id="apl-toggle-img" alt="Chat with Apl">
+  <div class="badge"></div>
+</div>
+<div id="apl-panel">
+  <div id="apl-header">
+    <img src="characters/Apldeap_Exp3.png" id="apl-avatar" alt="Apl">
+    <div class="info"><div class="name">Apl De Ap</div><div class="status">Online — TreeCodex Guide</div></div>
+    <button id="apl-close" onclick="aplToggle()">×</button>
+  </div>
+  <div id="apl-messages"></div>
+  <div id="apl-suggestions"></div>
+  <div id="apl-input-wrap">
+    <input id="apl-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')aplSend()">
+    <button id="apl-send" onclick="aplSend()">↑</button>
+  </div>
+</div>
+`;
+document.body.appendChild(widget);
+
+let aplOpen=false;
+const msgs=document.getElementById('apl-messages');
+const sugs=document.getElementById('apl-suggestions');
+const hint=document.getElementById('apl-hint');
+
+// Hide hint after 5s
+setTimeout(()=>{if(hint)hint.style.display='none'},8000);
+
+function aplToggle(){
+  aplOpen=!aplOpen;
+  document.getElementById('apl-panel').classList.toggle('open',aplOpen);
+  if(hint)hint.style.display='none';
+  document.querySelector('#apl-toggle .badge').style.display='none';
+  if(aplOpen&&msgs.children.length===0){
+    aplBotMsg("Kumusta! I'm Apl — your guide to TreeCodex. Ask me anything about how we're planting real mangrove trees in the Philippines! 🌱🇵🇭",'greeting');
+    showSuggestions(['How does it work?','Where do you plant?','Where does my money go?','Can I get early access?']);
+  }
+}
+window.aplToggle=aplToggle;
+
+function aplBotMsg(text,exp){
+  const img=expressions[exp]||expressions.idle;
+  document.getElementById('apl-avatar').src=img;
+  document.getElementById('apl-toggle-img').src=img;
+  const d=document.createElement('div');
+  d.className='apl-msg bot';
+  d.innerHTML='<img class="avatar" src="'+img+'" alt="Apl"><div class="bubble">'+text+'</div>';
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function aplUserMsg(text){
+  const d=document.createElement('div');
+  d.className='apl-msg user';
+  d.innerHTML='<div class="bubble">'+text+'</div>';
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+function showSuggestions(items){
+  sugs.innerHTML='';
+  items.forEach(s=>{
+    const b=document.createElement('button');
+    b.className='apl-sug';
+    b.textContent=s;
+    b.onclick=()=>{document.getElementById('apl-input').value=s;aplSend()};
+    sugs.appendChild(b);
+  });
+}
+
+function aplSend(){
+  const input=document.getElementById('apl-input');
+  const q=input.value.trim();
+  if(!q)return;
+  input.value='';
+  aplUserMsg(q);
+  sugs.innerHTML='';
+
+  // Typing indicator
+  const typing=document.createElement('div');
+  typing.className='apl-msg bot';
+  typing.innerHTML='<img class="avatar" src="'+expressions.thinking+'" alt="Apl"><div class="bubble" style="opacity:.5">Thinking...</div>';
+  msgs.appendChild(typing);
+  document.getElementById('apl-avatar').src=expressions.thinking;
+  msgs.scrollTop=msgs.scrollHeight;
+
+  setTimeout(()=>{
+    msgs.removeChild(typing);
+    let matched=false;
+    for(const item of qaData){
+      if(item.q.test(q)){aplBotMsg(item.a,item.exp);matched=true;break;}
+    }
+    if(!matched){
+      aplBotMsg("Great question! I don't have a specific answer for that yet, but you can reach the team directly at uynghiem@earthsama.com — they'll get back to you fast! In the meantime, want to know how TreeCodex works? 🤔",'confused');
+      showSuggestions(['How does it work?','Where does my money go?','Tell me about the app']);
+    } else {
+      showSuggestions(['How does it work?','Where do you plant?','Tell me about pricing','Can I get early access?']);
+    }
+  },800+Math.random()*600);
+}
+window.aplSend=aplSend;
+})();
 
 // ── Interactive phone demo ──
 let currentScreen=0;

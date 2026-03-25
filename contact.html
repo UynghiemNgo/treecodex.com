@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — TreeCodex</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#050510;color:#c8d5e2;line-height:1.6}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:#fff}
+a{color:#6BC5AD}
+.top-bar{padding:16px 40px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:10px;position:sticky;top:0;background:rgba(5,5,16,.95);backdrop-filter:blur(20px);z-index:10}
+.top-bar img{height:28px}
+.top-bar span{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#fff}
+.top-bar a.back{margin-left:auto;color:#6BC5AD;text-decoration:none;font-size:14px}
+.glow{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+.glow-1{width:500px;height:500px;background:#1a3a5c;top:-150px;right:-150px;opacity:.12}
+.glow-2{width:400px;height:400px;background:#1a4a3a;bottom:-100px;left:-100px;opacity:.08}
+.hero{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:60px 24px 40px;display:flex;align-items:center;gap:48px}
+.hero-character{flex-shrink:0}
+.hero-character img{width:200px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-text h1{font-size:36px;margin-bottom:12px}
+.hero-text p{font-size:16px;color:rgba(255,255,255,.5);max-width:400px}
+.speech{background:rgba(107,197,173,.06);border:1px solid rgba(107,197,173,.12);border-radius:20px;padding:16px 20px;margin-top:20px;font-size:14px;color:rgba(255,255,255,.65);position:relative}
+.speech::before{content:'';position:absolute;left:-10px;top:20px;width:20px;height:20px;background:rgba(107,197,173,.06);border-left:1px solid rgba(107,197,173,.12);border-bottom:1px solid rgba(107,197,173,.12);transform:rotate(45deg)}
+
+.contact-grid{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.contact-card{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:28px 24px;transition:all .3s}
+.contact-card:hover{transform:translateY(-4px);border-color:rgba(107,197,173,.15);box-shadow:0 12px 40px rgba(0,0,0,.2)}
+.contact-icon{font-size:32px;margin-bottom:12px;display:block}
+.contact-card h3{font-size:17px;margin-bottom:6px}
+.contact-card p{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:12px}
+.contact-card a{font-size:14px;text-decoration:none;font-weight:500}
+
+.faq{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:40px 24px 80px}
+.faq h2{font-size:24px;margin-bottom:24px;text-align:center}
+.faq-item{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px 24px;margin-bottom:12px}
+.faq-q{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.faq-q img{width:28px;height:28px;border-radius:50%;object-fit:cover;object-position:top}
+.faq-a{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;padding-left:38px}
+
+@media(max-width:600px){.hero{flex-direction:column;text-align:center}.hero-character img{width:150px}.speech::before{display:none}.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<div class="top-bar">
+  <img src="logo_icon.png" alt="TreeCodex">
+  <span>TreeCodex</span>
+  <a href="index.html" class="back">← Back to Home</a>
+</div>
+
+<div class="hero">
+  <div class="hero-character">
+    <img src="characters/Apldeap_Exp11.png" alt="Apl De Ap">
+  </div>
+  <div class="hero-text">
+    <h1>Let's Talk</h1>
+    <p>Got questions about TreeCodex, partnership opportunities, or just want to say hey?</p>
+    <div class="speech">
+      "Kumusta! I'm here to help. Whether you want to plant trees, join as an NGO, or bring your company on board — hit me up! 🌱"
+    </div>
+  </div>
+</div>
+
+<div class="contact-grid">
+  <div class="contact-card">
+    <span class="contact-icon">📧</span>
+    <h3>Email</h3>
+    <p>For partnerships, press, or general inquiries</p>
+    <a href="mailto:uynghiem@earthsama.com">uynghiem@earthsama.com</a>
+  </div>
+  <div class="contact-card">
+    <span class="contact-icon">🌱</span>
+    <h3>Early Access</h3>
+    <p>Want to try TreeCodex before launch?</p>
+    <a href="mailto:uynghiem@earthsama.com?subject=TreeCodex%20Early%20Access%20Request">Request Early Access →</a>
+  </div>
+  <div class="contact-card">
+    <span class="contact-icon">🌍</span>
+    <h3>NGO Partners</h3>
+    <p>Run a mangrove restoration project? Let's connect your planters.</p>
+    <a href="mailto:uynghiem@earthsama.com?subject=NGO%20Partnership%20Inquiry">Partner With Us →</a>
+  </div>
+  <div class="contact-card">
+    <span class="contact-icon">🏢</span>
+    <h3>Enterprise</h3>
+    <p>Offset your company's carbon. Bulk tree purchases + ESG reports.</p>
+    <a href="mailto:uynghiem@earthsama.com?subject=Enterprise%20Inquiry">Enterprise Plans →</a>
+  </div>
+</div>
+
+<div class="faq">
+  <h2>Common Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q"><img src="characters/Apldeap_Exp8.png" alt="">How does TreeCodex verify trees are actually planted?</div>
+    <div class="faq-a">Every planter submits GPS-tagged photos from the exact planting location. The NGO reviews the coordinates, photos, and timestamps before approving. Each verified tree gets a unique ID and permanent public page you can visit anytime.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q"><img src="characters/Apldeap_Exp9.png" alt="">Where does my money go?</div>
+    <div class="faq-a">90% goes directly to the NGO and their field team — the people doing the actual planting. Planters are paid 20% above local market wages. Only 10% sustains the TreeCodex platform. No middlemen.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q"><img src="characters/Apldeap_Exp7.png" alt="">Can multiple people fund one tree?</div>
+    <div class="faq-a">Yes! Trees can be co-funded. Multiple donors contribute until a tree is 100% funded, then it gets assigned to a planter. Every contributor appears on the tree's public page.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q"><img src="characters/Apldeap_Exp5.png" alt="">Which countries are you planting in?</div>
+    <div class="faq-a">We're starting in the Philippines — specifically Palawan (Sabang mangrove forest), Aklan near Boracay (Bakhawan Eco-Park), and Mindoro (Silonay Conservation Area). More regions coming soon.</div>
+  </div>
+</div>
+
+</body>
+</html>
