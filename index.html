@@ -347,159 +347,174 @@ section{position:relative;z-index:1}
         <div class="dynamic-island"></div>
         <div class="iphone-screen-wrap" id="demoWrap">
 
-          <!-- Screen 1: Home — Impact Dashboard -->
-          <div class="demo-screen active" data-screen="0" onclick="demoGo(1)" style="cursor:pointer;background:#f7faff">
-            <div class="ps-greet">Good evening, Test</div>
-            <div class="ps-sub">Making the world greener, one action at a time</div>
-            <div class="ps-stat-grid">
-              <div class="ps-stat-box">
-                <div class="ps-stat-num" style="font-size:28px;color:var(--green)">12</div>
-                <div class="ps-stat-label">Trees Planted</div>
+          <!-- Screen 1: Home — matches Flutter app -->
+          <div class="demo-screen active" data-screen="0" onclick="demoGo(1)" style="cursor:pointer;background:#f7faff;padding:0;overflow-y:auto">
+            <!-- Cover photo -->
+            <div style="height:80px;background:linear-gradient(135deg,#5EBE9A,#6BC5AD,#5EBE9A);border-radius:0 0 14px 14px;position:relative">
+              <div style="position:absolute;bottom:-24px;left:14px;width:52px;height:52px;border-radius:50%;border:3px solid #f7faff;background:#E0ECFB;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">🧑</div>
+            </div>
+            <div style="padding:32px 14px 14px">
+              <!-- Greeting -->
+              <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+                <div>
+                  <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:#242A33">Good evening, Test</div>
+                  <div style="font-size:9px;color:#8A9098">Making the world greener</div>
+                </div>
+                <div style="padding:3px 8px;background:#FEF3C7;border-radius:20px;font-size:8px;font-weight:600;color:#242A33">🔥 7 day</div>
               </div>
-              <div class="ps-stat-box">
-                <div class="ps-stat-num" style="font-size:20px">3</div>
-                <div class="ps-stat-label">Projects</div>
+              <!-- Impact + Tree card -->
+              <div style="background:#fff;border-radius:14px;padding:10px;border:1px solid #E3EAF2;margin-bottom:8px">
+                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div style="width:32px;height:32px;background:#DFF5EB;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px">🌿</div>
+                    <div>
+                      <div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:800;color:#5EBE9A;line-height:1">12</div>
+                      <div style="font-size:8px;color:#8A9098">Trees Planted</div>
+                    </div>
+                  </div>
+                  <div style="padding:4px 8px;background:#DFF5EB;border-radius:8px;border:1px solid #E3EAF2;display:flex;align-items:center;gap:4px">
+                    <span style="font-size:10px">🌳</span>
+                    <div><div style="font-size:8px;font-weight:600;color:#242A33">Rhizophora</div><div style="font-size:7px;color:#8A9098">Palawan</div></div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:4px">
+                  <div style="flex:1;text-align:center;padding:5px 2px;background:#f7faff;border-radius:8px"><div style="font-size:7px">🗑️</div><div style="font-size:10px;font-weight:700;color:#242A33">48</div><div style="font-size:6px;color:#8A9098">lbs Trash</div></div>
+                  <div style="flex:1;text-align:center;padding:5px 2px;background:#f7faff;border-radius:8px"><div style="font-size:7px">♻️</div><div style="font-size:10px;font-weight:700;color:#242A33">23</div><div style="font-size:6px;color:#8A9098">lbs Plastic</div></div>
+                  <div style="flex:1;text-align:center;padding:5px 2px;background:#f7faff;border-radius:8px"><div style="font-size:7px">📁</div><div style="font-size:10px;font-weight:700;color:#242A33">3</div><div style="font-size:6px;color:#8A9098">Projects</div></div>
+                  <div style="flex:1;text-align:center;padding:5px 2px;background:#f7faff;border-radius:8px"><div style="font-size:7px">☁️</div><div style="font-size:10px;font-weight:700;color:#242A33">0.8t</div><div style="font-size:6px;color:#8A9098">CO₂e</div></div>
+                </div>
               </div>
-              <div class="ps-stat-box">
-                <div class="ps-stat-num" style="font-size:20px">48 lbs</div>
-                <div class="ps-stat-label">Trash Collected</div>
+              <!-- Journal card -->
+              <div style="background:linear-gradient(135deg,#E0ECFB,#D4F1E8);border-radius:14px;padding:10px;margin-bottom:8px">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+                  <div style="width:26px;height:26px;background:rgba(90,159,212,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px">📖</div>
+                  <div><div style="font-size:10px;font-weight:700;color:#242A33">Lifestyle Journal</div><div style="font-size:7px;color:#606878">Voice-powered daily log</div></div>
+                </div>
+                <div style="display:flex;gap:4px;align-items:center;padding:5px 6px;background:rgba(255,255,255,0.6);border-radius:8px;margin-bottom:3px;font-size:9px;color:#242A33">🚲 <span style="flex:1">Biked to work</span><span style="color:#5A9FD4;font-size:7px">2h ago</span></div>
+                <div style="display:flex;gap:4px;align-items:center;padding:5px 6px;background:rgba(255,255,255,0.6);border-radius:8px;font-size:9px;color:#242A33">🥗 <span style="flex:1">Plant-based lunch</span><span style="color:#5A9FD4;font-size:7px">5h ago</span></div>
               </div>
-              <div class="ps-stat-box">
-                <div class="ps-stat-num" style="font-size:20px">23 lbs</div>
-                <div class="ps-stat-label">Plastic Recycled</div>
+              <!-- Grove + Quests -->
+              <div style="background:#fff;border-radius:14px;padding:10px;border:1px solid #E3EAF2">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                  <div style="width:28px;height:28px;background:#E0ECFB;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">🧑</div>
+                  <div><div style="font-size:10px;font-weight:700;color:#242A33">Your Grove</div><div style="font-size:7px;color:#5EBE9A;font-weight:600">Level 5 — Seedling Guardian</div></div>
+                </div>
+                <div style="height:5px;background:#E3EAF2;border-radius:3px;margin-bottom:8px"><div style="width:65%;height:100%;background:linear-gradient(90deg,#5EBE9A,#6BC5AD);border-radius:3px"></div></div>
+                <div style="font-size:9px;font-weight:700;color:#242A33;margin-bottom:5px">⚡ Active Quests</div>
+                <div style="display:flex;gap:4px;align-items:center;padding:6px;background:#f7faff;border-radius:8px;margin-bottom:4px">
+                  <div style="width:22px;height:22px;background:#DFF5EB;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px">🌱</div>
+                  <div style="flex:1"><div style="font-size:8px;font-weight:600;color:#242A33">Plant a Tree</div><div style="height:2px;background:#E3EAF2;border-radius:1px;margin-top:2px"><div style="width:100%;height:100%;background:#5EBE9A;border-radius:1px"></div></div></div>
+                  <span style="font-size:7px;color:#5EBE9A;font-weight:700">+300</span>
+                </div>
+                <div style="display:flex;gap:4px;align-items:center;padding:6px;background:#f7faff;border-radius:8px;margin-bottom:4px">
+                  <div style="width:22px;height:22px;background:#DFF5EB;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px">🗑️</div>
+                  <div style="flex:1"><div style="font-size:8px;font-weight:600;color:#242A33">Trash Collector</div><div style="height:2px;background:#E3EAF2;border-radius:1px;margin-top:2px"><div style="width:60%;height:100%;background:#6BC5AD;border-radius:1px"></div></div></div>
+                  <span style="font-size:7px;color:#5EBE9A;font-weight:700">+150</span>
+                </div>
+                <div style="display:flex;gap:4px;align-items:center;padding:6px;background:#f7faff;border-radius:8px">
+                  <div style="width:22px;height:22px;background:#CFEFFF;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px">🚲</div>
+                  <div style="flex:1"><div style="font-size:8px;font-weight:600;color:#242A33">Transit Rider</div><div style="height:2px;background:#E3EAF2;border-radius:1px;margin-top:2px"><div style="width:40%;height:100%;background:#5A9FD4;border-radius:1px"></div></div></div>
+                  <span style="font-size:7px;color:#5EBE9A;font-weight:700">+200</span>
+                </div>
               </div>
             </div>
-            <div style="font-size:11px;font-weight:600;color:#242A33;margin-bottom:8px">Active Quests</div>
-            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
-              <span style="font-size:16px">🌱</span>
-              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Plant a Tree</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:100%;height:100%;background:var(--green);border-radius:2px"></div></div></div>
-              <span style="font-size:9px;color:var(--green);font-weight:700">+300 XP</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
-              <span style="font-size:16px">🗑️</span>
-              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Trash Collector</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:60%;height:100%;background:var(--teal);border-radius:2px"></div></div></div>
-              <span style="font-size:9px;color:var(--green);font-weight:700">+150 XP</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px">
-              <span style="font-size:16px">🚲</span>
-              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Transit Rider</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:40%;height:100%;background:var(--blue);border-radius:2px"></div></div></div>
-              <span style="font-size:9px;color:var(--green);font-weight:700">+200 XP</span>
-            </div>
-            <div class="ps-bar" style="margin-top:10px">What did you do today?</div>
           </div>
 
           <!-- Screen 2: Lifestyle Journal -->
-          <div class="demo-screen" data-screen="1" onclick="demoGo(2)" style="cursor:pointer;background:#0e1621">
-            <div style="padding:0;display:flex;flex-direction:column;height:100%">
-              <div class="ps-title" style="color:#fff">📖 Lifestyle Journal</div>
-              <div style="padding:10px;background:rgba(255,255,255,0.05);border-radius:12px;margin-bottom:10px">
-                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
-                  <span style="font-size:14px">🚲</span>
-                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Biked to work</span>
-                  <span style="font-size:9px;color:var(--teal)">-3.2 kg</span>
+          <div class="demo-screen" data-screen="1" onclick="demoGo(2)" style="cursor:pointer;background:#f7faff;padding:56px 14px 14px">
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div class="ps-title">📖 Lifestyle Journal</div>
+              <!-- Today summary -->
+              <div style="display:flex;gap:6px;margin-bottom:10px">
+                <div style="flex:1;padding:8px;background:linear-gradient(135deg,#D4F1E8,#E0ECFB);border-radius:10px;text-align:center">
+                  <div style="font-size:14px;font-weight:700;color:#5A9FD4">5.7 kg</div><div style="font-size:7px;color:#606878">CO₂ Saved</div>
                 </div>
-                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
-                  <span style="font-size:14px">🥗</span>
-                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Plant-based lunch</span>
-                  <span style="font-size:9px;color:var(--teal)">-2.5 kg</span>
+                <div style="flex:1;padding:8px;background:linear-gradient(135deg,#D4F1E8,#E0ECFB);border-radius:10px;text-align:center">
+                  <div style="font-size:14px;font-weight:700;color:#5EBE9A">4</div><div style="font-size:7px;color:#606878">Actions</div>
                 </div>
-                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
-                  <span style="font-size:14px">🗑️</span>
-                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Picked up litter in park</span>
-                  <span style="font-size:9px;color:var(--teal)">+50 XP</span>
-                </div>
-                <div style="display:flex;gap:8px;align-items:center">
-                  <span style="font-size:14px">♻️</span>
-                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Recycled 4 bottles</span>
-                  <span style="font-size:9px;color:var(--teal)">+25 XP</span>
+                <div style="flex:1;padding:8px;background:linear-gradient(135deg,#D4F1E8,#E0ECFB);border-radius:10px;text-align:center">
+                  <div style="font-size:14px;font-weight:700;color:#F6D6A8">7</div><div style="font-size:7px;color:#606878">Streak</div>
                 </div>
               </div>
-              <div style="display:flex;gap:8px;margin-bottom:12px">
-                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
-                  <div style="font-size:16px;font-weight:700;color:var(--teal)">5.7 kg</div>
-                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">CO₂ Saved</div>
-                </div>
-                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
-                  <div style="font-size:16px;font-weight:700;color:var(--blue)">4</div>
-                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">Actions</div>
-                </div>
-                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
-                  <div style="font-size:16px;font-weight:700;color:var(--gold)">7</div>
-                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">Day Streak</div>
-                </div>
+              <!-- Entries -->
+              <div style="display:flex;gap:8px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
+                <div style="width:28px;height:28px;background:#DFF5EB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px">🚲</div>
+                <div style="flex:1"><div style="font-size:10px;font-weight:500;color:#242A33">Biked to work</div><div style="font-size:7px;color:#8A9098">Transport · 2h ago</div></div>
+                <div style="padding:2px 6px;background:#DFF5EB;border-radius:10px;font-size:8px;font-weight:600;color:#5EBE9A">-3.2 kg</div>
               </div>
-              <div class="ps-btn teal">🎤 Log by Voice</div>
+              <div style="display:flex;gap:8px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
+                <div style="width:28px;height:28px;background:#DFF5EB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px">🥗</div>
+                <div style="flex:1"><div style="font-size:10px;font-weight:500;color:#242A33">Plant-based lunch</div><div style="font-size:7px;color:#8A9098">Food · 5h ago</div></div>
+                <div style="padding:2px 6px;background:#DFF5EB;border-radius:10px;font-size:8px;font-weight:600;color:#5EBE9A">-2.5 kg</div>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
+                <div style="width:28px;height:28px;background:#DFF5EB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px">🗑️</div>
+                <div style="flex:1"><div style="font-size:10px;font-weight:500;color:#242A33">Picked up litter</div><div style="font-size:7px;color:#8A9098">Lifestyle · 6h ago</div></div>
+                <div style="padding:2px 6px;background:#DFF5EB;border-radius:10px;font-size:8px;font-weight:600;color:#5EBE9A">+50 XP</div>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px">
+                <div style="width:28px;height:28px;background:#DFF5EB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px">♻️</div>
+                <div style="flex:1"><div style="font-size:10px;font-weight:500;color:#242A33">Recycled 4 bottles</div><div style="font-size:7px;color:#8A9098">Lifestyle · Yesterday</div></div>
+                <div style="padding:2px 6px;background:#DFF5EB;border-radius:10px;font-size:8px;font-weight:600;color:#5EBE9A">+25 XP</div>
+              </div>
               <div style="flex:1"></div>
-              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Back</div>
+              <!-- Input bar -->
+              <div style="display:flex;gap:6px;align-items:center">
+                <div style="width:32px;height:32px;background:#f7faff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:1px solid #E3EAF2">🎤</div>
+                <div style="flex:1;padding:8px 12px;background:#f7faff;border:1px solid #E3EAF2;border-radius:20px;font-size:9px;color:#8A9098">What did you do today?</div>
+                <div style="width:28px;height:28px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff">↑</div>
+              </div>
             </div>
           </div>
 
           <!-- Screen 3: Plant Trees -->
-          <div class="demo-screen" data-screen="2" onclick="demoGo(3)" style="cursor:pointer;background:#0e1621">
-            <div style="padding:0;display:flex;flex-direction:column;height:100%">
-              <div class="ps-title" style="color:#fff">🌳 Choose a Project</div>
-              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Sabang Reforestation</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Puerto Princesa, Palawan</div>
-                <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
-                  <div style="width:48%;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:2px"></div>
-                </div>
-                <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.35)"><span>4,812 / 10,000</span><span>$3.80/tree</span></div>
+          <div class="demo-screen" data-screen="2" onclick="demoGo(3)" style="cursor:pointer;background:#f7faff;padding:56px 14px 14px">
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div class="ps-title">🌳 Choose a Project</div>
+              <div style="background:#fff;border:1px solid #E3EAF2;border-radius:14px;padding:12px;margin-bottom:8px">
+                <div style="font-size:12px;font-weight:600;color:#242A33;margin-bottom:3px">Sabang Reforestation</div>
+                <div style="font-size:9px;color:#8A9098;margin-bottom:6px">📍 Puerto Princesa, Palawan</div>
+                <div style="height:4px;background:#E3EAF2;border-radius:2px;overflow:hidden;margin-bottom:3px"><div style="width:48%;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:2px"></div></div>
+                <div style="display:flex;justify-content:space-between;font-size:8px;color:#8A9098"><span>4,812 / 10,000</span><span>$3.80/tree</span></div>
               </div>
-              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Bakhawan Eco-Park</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Kalibo, Aklan (Boracay)</div>
-                <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
-                  <div style="width:72%;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-light));border-radius:2px"></div>
-                </div>
-                <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.35)"><span>8,424 / 11,700</span><span>$4.20/tree</span></div>
+              <div style="background:#fff;border:1px solid #E3EAF2;border-radius:14px;padding:12px;margin-bottom:8px">
+                <div style="font-size:12px;font-weight:600;color:#242A33;margin-bottom:3px">Bakhawan Eco-Park</div>
+                <div style="font-size:9px;color:#8A9098;margin-bottom:6px">📍 Kalibo, Aklan (Boracay)</div>
+                <div style="height:4px;background:#E3EAF2;border-radius:2px;overflow:hidden;margin-bottom:3px"><div style="width:72%;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-light));border-radius:2px"></div></div>
+                <div style="display:flex;justify-content:space-between;font-size:8px;color:#8A9098"><span>8,424 / 11,700</span><span>$4.20/tree</span></div>
               </div>
-              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Silonay Conservation Area</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Calapan, Mindoro</div>
-                <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
-                  <div style="width:31%;height:100%;background:linear-gradient(90deg,var(--teal),var(--mint));border-radius:2px"></div>
-                </div>
-                <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.35)"><span>1,426 / 4,600</span><span>$3.50/tree</span></div>
+              <div style="background:#fff;border:1px solid #E3EAF2;border-radius:14px;padding:12px">
+                <div style="font-size:12px;font-weight:600;color:#242A33;margin-bottom:3px">Silonay Conservation</div>
+                <div style="font-size:9px;color:#8A9098;margin-bottom:6px">📍 Calapan, Mindoro</div>
+                <div style="height:4px;background:#E3EAF2;border-radius:2px;overflow:hidden;margin-bottom:3px"><div style="width:31%;height:100%;background:linear-gradient(90deg,var(--teal),var(--mint));border-radius:2px"></div></div>
+                <div style="display:flex;justify-content:space-between;font-size:8px;color:#8A9098"><span>1,426 / 4,600</span><span>$3.50/tree</span></div>
               </div>
               <div style="flex:1"></div>
-              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
+              <div class="ps-btn dim">← Home</div>
             </div>
           </div>
 
           <!-- Screen 4: My Trees -->
-          <div class="demo-screen" data-screen="3" onclick="demoGo(0)" style="cursor:pointer;background:#0e1621">
-            <div style="padding:0;display:flex;flex-direction:column;height:100%">
-              <div class="ps-title" style="color:#fff">📍 My Trees <span style="font-weight:400;color:rgba(255,255,255,0.4);font-size:12px">(12)</span></div>
-              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌳</div>
-                <div style="flex:1">
-                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00412</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Sabang, Palawan</div>
-                  <div style="font-size:9px;color:var(--teal)">🌿 24.5 kg CO₂/yr</div>
-                </div>
-                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(90,159,212,.1);color:#5A9FD4">Verified</span>
+          <div class="demo-screen" data-screen="3" onclick="demoGo(0)" style="cursor:pointer;background:#f7faff;padding:56px 14px 14px">
+            <div style="display:flex;flex-direction:column;height:100%">
+              <div class="ps-title">🌳 My Trees <span style="font-weight:400;color:#8A9098;font-size:12px">(12)</span></div>
+              <div style="display:flex;gap:8px;align-items:center;padding:10px;background:#fff;border:1px solid #E3EAF2;border-radius:14px;margin-bottom:6px">
+                <div style="width:36px;height:36px;border-radius:10px;background:#DFF5EB;display:flex;align-items:center;justify-content:center;font-size:18px">🌳</div>
+                <div style="flex:1"><div style="font-size:11px;font-weight:600;color:#242A33">TC-2026-00412</div><div style="font-size:8px;color:#8A9098">📍 Sabang, Palawan</div><div style="font-size:8px;color:var(--teal-dark)">🌿 24.5 kg CO₂/yr</div></div>
+                <span style="padding:3px 8px;border-radius:10px;font-size:8px;font-weight:600;background:#E0ECFB;color:#5A9FD4">Verified</span>
               </div>
-              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌴</div>
-                <div style="flex:1">
-                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00413</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Kalibo, Aklan</div>
-                  <div style="font-size:9px;color:var(--teal)">🌿 31.2 kg CO₂/yr</div>
-                </div>
-                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(107,197,173,.1);color:var(--teal-dark)">Growing</span>
+              <div style="display:flex;gap:8px;align-items:center;padding:10px;background:#fff;border:1px solid #E3EAF2;border-radius:14px;margin-bottom:6px">
+                <div style="width:36px;height:36px;border-radius:10px;background:#DFF5EB;display:flex;align-items:center;justify-content:center;font-size:18px">🌴</div>
+                <div style="flex:1"><div style="font-size:11px;font-weight:600;color:#242A33">TC-2026-00413</div><div style="font-size:8px;color:#8A9098">📍 Kalibo, Aklan</div><div style="font-size:8px;color:var(--teal-dark)">🌿 31.2 kg CO₂/yr</div></div>
+                <span style="padding:3px 8px;border-radius:10px;font-size:8px;font-weight:600;background:#DFF5EB;color:var(--teal-dark)">Growing</span>
               </div>
-              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
-                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌲</div>
-                <div style="flex:1">
-                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00414</div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Silonay, Mindoro</div>
-                  <div style="font-size:9px;color:var(--teal)">🌿 19.8 kg CO₂/yr</div>
-                </div>
-                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(90,159,212,.1);color:#5A9FD4">Verified</span>
+              <div style="display:flex;gap:8px;align-items:center;padding:10px;background:#fff;border:1px solid #E3EAF2;border-radius:14px;margin-bottom:6px">
+                <div style="width:36px;height:36px;border-radius:10px;background:#DFF5EB;display:flex;align-items:center;justify-content:center;font-size:18px">🌲</div>
+                <div style="flex:1"><div style="font-size:11px;font-weight:600;color:#242A33">TC-2026-00414</div><div style="font-size:8px;color:#8A9098">📍 Silonay, Mindoro</div><div style="font-size:8px;color:var(--teal-dark)">🌿 19.8 kg CO₂/yr</div></div>
+                <span style="padding:3px 8px;border-radius:10px;font-size:8px;font-weight:600;background:#E0ECFB;color:#5A9FD4">Verified</span>
               </div>
               <div style="flex:1"></div>
-              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
+              <div class="ps-btn dim">← Home</div>
             </div>
           </div>
 
