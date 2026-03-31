@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TreeCodex — The Net Zero Challenge</title>
+<title>TreeCodex — High Impact Lifestyle</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -51,11 +51,11 @@ body::before{
 @keyframes floatA{0%,100%{transform:translateY(0) rotate(0deg)}33%{transform:translateY(-20px) rotate(5deg)}66%{transform:translateY(14px) rotate(-3deg)}}
 
 /* ── Navbar ── */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:center;transition:background .4s,backdrop-filter .4s}
 .navbar.scrolled{background:rgba(5,5,16,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .nav-logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
-.nav-logo img{height:34px;width:auto}
-.nav-links{display:flex;gap:28px;align-items:center}
+.nav-logo img{height:40px;width:auto}
+.nav-links{position:absolute;right:40px;display:flex;gap:28px;align-items:center}
 .nav-links a{color:var(--text-dim);text-decoration:none;font-size:14px;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:var(--teal)}
 .nav-cta{padding:10px 24px!important;background:linear-gradient(135deg,var(--teal),var(--green))!important;color:#050510!important;border-radius:50px;font-weight:600!important;transition:transform .3s,box-shadow .3s!important}
@@ -100,34 +100,29 @@ section{position:relative;z-index:1}
   overflow:hidden;
   position:relative;
 }
-/* Dynamic Island — iPhone 17 smaller pill */
 .dynamic-island{
   position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:10;
   width:100px;height:30px;
   background:#000;border-radius:16px;
   box-shadow:0 0 0 1px rgba(255,255,255,0.04);
 }
-/* Camera dot inside island */
 .dynamic-island::after{
   content:'';position:absolute;width:8px;height:8px;
   background:radial-gradient(circle,#1a2a3a 30%,#0a0a14 70%);
   border:1px solid rgba(255,255,255,0.06);
   border-radius:50%;right:14px;top:50%;transform:translateY(-50%);
 }
-/* Side buttons — thinner for iPhone 17 */
 .iphone::before{content:'';position:absolute;right:-2.5px;top:140px;width:2.5px;height:56px;background:#2a2a2e;border-radius:0 1.5px 1.5px 0}
 .iphone::after{content:'';position:absolute;left:-2.5px;top:120px;width:2.5px;height:32px;background:#2a2a2e;border-radius:1.5px 0 0 1.5px}
 .vol-btn{position:absolute;left:-2.5px;width:2.5px;background:#2a2a2e;border-radius:1.5px 0 0 1.5px}
 .vol-up{top:165px;height:32px}.vol-dn{top:205px;height:32px}
 
-/* Screen container — edge-to-edge display */
 .iphone-screen-wrap{
   position:absolute;top:2px;left:2px;right:2px;bottom:2px;
   border-radius:52px;overflow:hidden;
   background:linear-gradient(180deg,var(--cream),#eef3fb);
 }
 
-/* Demo screens */
 .demo-screen{
   position:absolute;top:0;left:0;width:100%;height:100%;
   display:flex;flex-direction:column;
@@ -137,8 +132,6 @@ section{position:relative;z-index:1}
   pointer-events:none;
 }
 .demo-screen.active{opacity:1;transform:translateY(0);pointer-events:auto}
-
-/* Demo progress dots */
 .demo-dots{
   position:absolute;bottom:8px;left:50%;transform:translateX(-50%);
   display:flex;gap:6px;z-index:15;
@@ -148,8 +141,6 @@ section{position:relative;z-index:1}
   background:rgba(36,42,51,0.2);transition:all 0.3s;
 }
 .demo-dot.active{background:#5A9FD4;width:18px;border-radius:3px}
-
-/* Tap hint */
 .tap-hint{
   position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
   font-size:9px;color:rgba(36,42,51,0.3);font-weight:500;
@@ -158,7 +149,6 @@ section{position:relative;z-index:1}
 }
 @keyframes tapPulse{0%,100%{opacity:0.4}50%{opacity:1}}
 
-/* Screen element styles */
 .ps-logo{height:22px;width:auto;margin-bottom:14px;align-self:center}
 .ps-greet{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#242A33;margin-bottom:2px}
 .ps-sub{font-size:11px;color:#606878;margin-bottom:18px}
@@ -168,21 +158,16 @@ section{position:relative;z-index:1}
 .ps-btn.out{background:#fff;border:1px solid #E3EAF2;color:#242A33}
 .ps-btn.dim{background:rgba(107,197,173,.08);color:var(--teal-dark)}
 .ps-bar{margin-top:auto;height:38px;border-radius:19px;background:#fff;border:1px solid #E3EAF2;display:flex;align-items:center;padding:0 14px;font-size:10px;color:#8A9098;box-shadow:0 4px 16px rgba(80,56,120,.05)}
-/* Screen-specific */
 .ps-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:#242A33;margin-bottom:12px}
 .ps-label{font-size:10px;color:#8A9098;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
 .ps-input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid #E3EAF2;background:#fff;font-size:12px;color:#242A33;font-family:'Inter',sans-serif;margin-bottom:10px}
 .ps-result-card{background:#fff;border:1px solid #E3EAF2;border-radius:16px;padding:14px;margin-bottom:10px}
 .ps-big{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#242A33}
 .ps-small{font-size:10px;color:#8A9098;margin-top:2px}
-.ps-tree-item{display:flex;gap:10px;align-items:center;padding:10px;background:#fff;border:1px solid #E3EAF2;border-radius:14px;margin-bottom:8px}
-.ps-tree-icon{width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.ps-tree-name{font-size:11px;font-weight:600;color:#242A33}
-.ps-tree-loc{font-size:9px;color:#8A9098}
-.ps-tree-co2{font-size:9px;color:var(--teal-dark);margin-top:1px}
-.ps-status{display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600}
-.ps-status.verified{background:rgba(90,159,212,.1);color:#5A9FD4}
-.ps-status.growing{background:rgba(107,197,173,.1);color:var(--teal-dark)}
+.ps-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.ps-stat-box{background:#f7faff;border-radius:12px;padding:10px;text-align:center}
+.ps-stat-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#242A33;line-height:1.1}
+.ps-stat-label{font-size:9px;color:#8A9098;margin-top:2px}
 
 .orbital-ring{position:absolute;width:440px;height:440px;border:1px solid rgba(90,159,212,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin 40s linear infinite}
 .orbital-ring::after{content:'';position:absolute;width:8px;height:8px;background:var(--blue);border-radius:50%;top:-4px;left:50%;box-shadow:0 0 16px var(--blue)}
@@ -201,7 +186,6 @@ section{position:relative;z-index:1}
 .hl-blue{display:inline;color:var(--blue);font-weight:500}
 .story-visual{flex:1;display:flex;justify-content:center}
 
-/* ── Story cards — higher contrast ── */
 .story-card{
   width:320px;padding:32px;
   background:rgba(20,24,40,0.85);
@@ -226,23 +210,32 @@ section{position:relative;z-index:1}
 .proof-line{font-size:12px;color:var(--text-faint);margin-bottom:4px}
 .proof-line:last-child{margin-bottom:0}
 
+/* Impact grid */
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.impact-card{background:rgba(20,24,40,0.7);border:1px solid rgba(255,255,255,.06);border-radius:24px;padding:32px 24px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.impact-card:hover{transform:translateY(-6px);border-color:rgba(107,197,173,.15)}
+.impact-icon{font-size:42px;margin-bottom:14px;display:block}
+.impact-card h3{font-size:18px;font-weight:600;color:#fff;margin-bottom:8px}
+.impact-card p{font-size:13px;color:var(--text-dim);line-height:1.6}
+
 /* Live feed */
 .live-dot{display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:6px;animation:pulse 2s infinite}
 .live-label{font-size:12px;color:var(--green);font-weight:600;margin-bottom:14px;display:flex;align-items:center}
 .feed-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .feed-item:last-child{border-bottom:none}
 .feed-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.feed-avatar.planter{background:rgba(107,197,173,.12)}
+.feed-avatar.farmer{background:rgba(107,197,173,.12)}
 .feed-avatar.ngo{background:rgba(90,159,212,.1)}
 .feed-avatar.user{background:rgba(158,195,239,.1)}
 .feed-avatar.biz{background:rgba(246,214,168,.1)}
+.feed-avatar.eco{background:rgba(168,228,200,.1)}
 .feed-action{font-size:13px;color:rgba(255,255,255,.55)}
 .feed-action strong{color:#fff}
 .feed-time{font-size:11px;color:var(--text-faint);margin-top:2px}
 
 /* ── Stats ── */
 .stats{padding:80px 60px}
-.stats-container{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:72px;flex-wrap:wrap}
+.stats-container{max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
 .stat{text-align:center}
 .stat-number{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:700;background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:6px}
 .stat-label{font-size:14px;color:var(--text-faint)}
@@ -269,12 +262,6 @@ section{position:relative;z-index:1}
 .cta-box{max-width:680px;margin:0 auto;padding:60px 44px;background:rgba(20,24,40,0.6);border:1px solid rgba(107,197,173,.1);border-radius:32px;backdrop-filter:blur(16px);position:relative;overflow:hidden;box-shadow:0 0 80px rgba(90,159,212,.04)}
 .cta h2{font-size:clamp(26px,3.5vw,40px);font-weight:700;color:#fff;margin-bottom:14px;position:relative}
 .cta p{font-size:16px;color:var(--text-dim);margin-bottom:32px;position:relative}
-.store-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
-.store-btn{display:flex;align-items:center;gap:10px;padding:13px 26px;background:#fff;color:#050510;border-radius:14px;text-decoration:none;font-family:'Space Grotesk',sans-serif;transition:transform .3s,box-shadow .3s}
-.store-btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,255,255,.1)}
-.store-icon{font-size:22px}
-.store-text small{font-size:10px;display:block;opacity:.5}
-.store-text span{font-size:15px;font-weight:600;display:block}
 
 /* ── Footer ── */
 .footer{padding:56px 60px 28px;border-top:1px solid var(--border);position:relative;z-index:1}
@@ -304,16 +291,15 @@ section{position:relative;z-index:1}
   .demo-screen{padding:44px 14px 14px}
   .ps-btn{padding:10px;font-size:11px;margin-bottom:6px}
   .ps-result-card{padding:10px}
-  .ps-tree-item{padding:8px}
-  .ps-title{font-size:12px}
   .story-section,.story-section.reverse{flex-direction:column;padding:60px 24px;gap:40px}
   .story-card{width:100%;max-width:360px}
   section{padding-left:24px!important;padding-right:24px!important}
-  .stats-container{gap:36px}
+  .stats-container{gap:28px}
   .footer-grid{grid-template-columns:1fr;gap:28px}
   .orbital-ring,.orbital-ring-2{display:none}
   .floating-element{display:none}
   .roles-grid{grid-template-columns:repeat(2,1fr)}
+  .impact-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -327,15 +313,15 @@ section{position:relative;z-index:1}
 <div class="glow-orb e"></div>
 <div class="floating-element float-1">🌍</div>
 <div class="floating-element float-2">🌿</div>
-<div class="floating-element float-3">📍</div>
+<div class="floating-element float-3">♻️</div>
 
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
-  <a href="#" class="nav-logo"><img src="logo.png" alt="TreeCodex">TreeCodex</a>
+  <a href="#" class="nav-logo"><img src="logo.png" alt="TreeCodex"></a>
   <div class="nav-links">
-    <a href="#story">Story</a>
+    <a href="#impact">Impact</a>
+    <a href="#story">How It Works</a>
     <a href="#roles">Who It's For</a>
-    <a href="#live">Live Feed</a>
     <a href="#download" class="nav-cta">Get Early Access</a>
   </div>
 </nav>
@@ -343,12 +329,12 @@ section{position:relative;z-index:1}
 <!-- Hero -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge"><span class="pulse"></span>Real trees. Real people. Real-time.</div>
-    <h1>Your flight lands.<br><span class="grad">A tree gets planted.</span></h1>
-    <p>TreeCodex connects you directly to planters on the ground in the Philippines. Calculate your carbon, fund a GPS-verified mangrove, and watch a real person plant it — with photo proof and coordinates you can visit.</p>
+    <div class="hero-badge"><span class="pulse"></span>Plant trees. Pick up trash. Live green.</div>
+    <h1>Small actions.<br><span class="grad">Real impact.</span></h1>
+    <p>Plant GPS-verified trees, pick up trash, recycle plastic, bike to work, walk more. TreeCodex tracks every sustainable action and turns your daily habits into measurable environmental impact.</p>
     <div class="hero-buttons">
       <a href="#download" class="btn-primary">Get Early Access</a>
-      <a href="#story" class="btn-ghost">See the Journey</a>
+      <a href="#impact" class="btn-ghost">See Your Impact</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -361,68 +347,100 @@ section{position:relative;z-index:1}
         <div class="dynamic-island"></div>
         <div class="iphone-screen-wrap" id="demoWrap">
 
-          <!-- Screen 1: Real app home screenshot -->
-          <div class="demo-screen active" data-screen="0" onclick="demoGo(1)" style="padding:0;cursor:pointer">
-            <img src="screens/s1_home.png" style="width:100%;height:100%;object-fit:cover;object-position:top;border-radius:52px" alt="TreeCodex Home">
+          <!-- Screen 1: Home — Impact Dashboard -->
+          <div class="demo-screen active" data-screen="0" onclick="demoGo(1)" style="cursor:pointer;background:#f7faff">
+            <div class="ps-greet">Good evening, Test</div>
+            <div class="ps-sub">Making the world greener, one action at a time</div>
+            <div class="ps-stat-grid">
+              <div class="ps-stat-box">
+                <div class="ps-stat-num" style="font-size:28px;color:var(--green)">12</div>
+                <div class="ps-stat-label">Trees Planted</div>
+              </div>
+              <div class="ps-stat-box">
+                <div class="ps-stat-num" style="font-size:20px">3</div>
+                <div class="ps-stat-label">Projects</div>
+              </div>
+              <div class="ps-stat-box">
+                <div class="ps-stat-num" style="font-size:20px">48 lbs</div>
+                <div class="ps-stat-label">Trash Collected</div>
+              </div>
+              <div class="ps-stat-box">
+                <div class="ps-stat-num" style="font-size:20px">23 lbs</div>
+                <div class="ps-stat-label">Plastic Recycled</div>
+              </div>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:#242A33;margin-bottom:8px">Active Quests</div>
+            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
+              <span style="font-size:16px">🌱</span>
+              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Plant a Tree</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:100%;height:100%;background:var(--green);border-radius:2px"></div></div></div>
+              <span style="font-size:9px;color:var(--green);font-weight:700">+300 XP</span>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px;margin-bottom:6px">
+              <span style="font-size:16px">🗑️</span>
+              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Trash Collector</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:60%;height:100%;background:var(--teal);border-radius:2px"></div></div></div>
+              <span style="font-size:9px;color:var(--green);font-weight:700">+150 XP</span>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;padding:8px;background:#fff;border:1px solid #E3EAF2;border-radius:10px">
+              <span style="font-size:16px">🚲</span>
+              <div style="flex:1"><div style="font-size:10px;font-weight:600;color:#242A33">Transit Rider</div><div style="height:3px;background:#E3EAF2;border-radius:2px;margin-top:3px"><div style="width:40%;height:100%;background:var(--blue);border-radius:2px"></div></div></div>
+              <span style="font-size:9px;color:var(--green);font-weight:700">+200 XP</span>
+            </div>
+            <div class="ps-bar" style="margin-top:10px">What did you do today?</div>
           </div>
 
-          <!-- Screen 2: Real app — dark mode tree cards (zoomed) -->
-          <div class="demo-screen" data-screen="1" style="padding:0;background:#0e1621">
-            <div style="padding:56px 18px 18px;display:flex;flex-direction:column;height:100%">
-              <div class="ps-title" style="color:#fff">✈️ Carbon Calculator</div>
-              <div class="ps-label" style="color:rgba(255,255,255,0.4)">From</div>
-              <div class="ps-input" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.08);color:#fff">MNL — Manila (Ninoy Aquino)</div>
-              <div class="ps-label" style="color:rgba(255,255,255,0.4)">To</div>
-              <div class="ps-input" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.08);color:#fff">NRT — Tokyo (Narita)</div>
-              <div class="ps-label" style="color:rgba(255,255,255,0.4)">Cabin Class</div>
-              <div style="display:flex;gap:6px;margin-bottom:14px">
-                <div style="flex:1;padding:8px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--green));color:#050510;font-size:10px;font-weight:600;text-align:center">Economy</div>
-                <div style="flex:1;padding:8px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);font-size:10px;color:rgba(255,255,255,0.5);text-align:center">Business</div>
-                <div style="flex:1;padding:8px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);font-size:10px;color:rgba(255,255,255,0.5);text-align:center">First</div>
+          <!-- Screen 2: Lifestyle Journal -->
+          <div class="demo-screen" data-screen="1" onclick="demoGo(2)" style="cursor:pointer;background:#0e1621">
+            <div style="padding:0;display:flex;flex-direction:column;height:100%">
+              <div class="ps-title" style="color:#fff">📖 Lifestyle Journal</div>
+              <div style="padding:10px;background:rgba(255,255,255,0.05);border-radius:12px;margin-bottom:10px">
+                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+                  <span style="font-size:14px">🚲</span>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Biked to work</span>
+                  <span style="font-size:9px;color:var(--teal)">-3.2 kg</span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+                  <span style="font-size:14px">🥗</span>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Plant-based lunch</span>
+                  <span style="font-size:9px;color:var(--teal)">-2.5 kg</span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+                  <span style="font-size:14px">🗑️</span>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Picked up litter in park</span>
+                  <span style="font-size:9px;color:var(--teal)">+50 XP</span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center">
+                  <span style="font-size:14px">♻️</span>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Recycled 4 bottles</span>
+                  <span style="font-size:9px;color:var(--teal)">+25 XP</span>
+                </div>
               </div>
-              <div class="ps-btn teal" onclick="event.stopPropagation();demoGo(2)">Calculate CO₂ →</div>
+              <div style="display:flex;gap:8px;margin-bottom:12px">
+                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
+                  <div style="font-size:16px;font-weight:700;color:var(--teal)">5.7 kg</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">CO₂ Saved</div>
+                </div>
+                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
+                  <div style="font-size:16px;font-weight:700;color:var(--blue)">4</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">Actions</div>
+                </div>
+                <div style="flex:1;padding:10px;background:rgba(255,255,255,0.05);border-radius:10px;text-align:center">
+                  <div style="font-size:16px;font-weight:700;color:var(--gold)">7</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.4)">Day Streak</div>
+                </div>
+              </div>
+              <div class="ps-btn teal">🎤 Log by Voice</div>
               <div style="flex:1"></div>
-              <div class="ps-btn" onclick="event.stopPropagation();demoGo(0)" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Back</div>
+              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Back</div>
             </div>
           </div>
 
-          <!-- Screen 3: Results — dark mode -->
-          <div class="demo-screen" data-screen="2" style="padding:0;background:#0e1621">
-            <div style="padding:56px 18px 18px;display:flex;flex-direction:column;height:100%">
-              <div class="ps-title" style="color:#fff">Your Flight Impact</div>
-              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="text-align:center">
-                  <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-bottom:4px">MNL → NRT · Economy</div>
-                  <div class="ps-big" style="color:#fff">0.82t CO₂</div>
-                  <div class="ps-small" style="color:rgba(255,255,255,0.35)">820 kg carbon dioxide equivalent</div>
-                </div>
-              </div>
-              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                  <div>
-                    <div style="font-size:10px;color:rgba(255,255,255,0.4)">Trees to offset</div>
-                    <div style="font-size:18px;font-weight:700;color:#fff;font-family:'Space Grotesk',sans-serif">41 trees</div>
-                  </div>
-                  <div style="text-align:right">
-                    <div style="font-size:10px;color:rgba(255,255,255,0.4)">Estimated cost</div>
-                    <div style="font-size:18px;font-weight:700;color:var(--teal);font-family:'Space Grotesk',sans-serif">$155.80</div>
-                  </div>
-                </div>
-              </div>
-              <div style="font-size:9px;color:rgba(255,255,255,0.3);text-align:center;margin-bottom:10px">90% to NGO + field team · 10% platform fee</div>
-              <div class="ps-btn teal" onclick="event.stopPropagation();demoGo(3)">🌱 &nbsp;Offset Now →</div>
-              <div style="flex:1"></div>
-              <div class="ps-btn" onclick="event.stopPropagation();demoGo(1)" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Back</div>
-            </div>
-          </div>
-
-          <!-- Screen 4: Projects — dark mode -->
-          <div class="demo-screen" data-screen="3" style="padding:0;background:#0e1621">
-            <div style="padding:56px 18px 18px;display:flex;flex-direction:column;height:100%">
+          <!-- Screen 3: Plant Trees -->
+          <div class="demo-screen" data-screen="2" onclick="demoGo(3)" style="cursor:pointer;background:#0e1621">
+            <div style="padding:0;display:flex;flex-direction:column;height:100%">
               <div class="ps-title" style="color:#fff">🌳 Choose a Project</div>
-              <div class="ps-result-card" onclick="event.stopPropagation();demoGo(4)" style="cursor:pointer;background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Sabang Mangrove Forest</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Puerto Princesa, Palawan · Rhizophora stylosa</div>
+              <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
+                <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Sabang Reforestation</div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Puerto Princesa, Palawan</div>
                 <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
                   <div style="width:48%;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:2px"></div>
                 </div>
@@ -430,7 +448,7 @@ section{position:relative;z-index:1}
               </div>
               <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
                 <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Bakhawan Eco-Park</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Kalibo, Aklan (Boracay) · Rhizophora stylosa</div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Kalibo, Aklan (Boracay)</div>
                 <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
                   <div style="width:72%;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-light));border-radius:2px"></div>
                 </div>
@@ -438,59 +456,50 @@ section{position:relative;z-index:1}
               </div>
               <div class="ps-result-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
                 <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:4px">Silonay Conservation Area</div>
-                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Calapan, Mindoro · Avicennia marina</div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:8px">📍 Calapan, Mindoro</div>
                 <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:4px">
                   <div style="width:31%;height:100%;background:linear-gradient(90deg,var(--teal),var(--mint));border-radius:2px"></div>
                 </div>
                 <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.35)"><span>1,426 / 4,600</span><span>$3.50/tree</span></div>
               </div>
               <div style="flex:1"></div>
-              <div class="ps-btn" onclick="event.stopPropagation();demoGo(0)" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
+              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
             </div>
           </div>
 
-          <!-- Screen 5: My Trees — dark mode -->
-          <div class="demo-screen" data-screen="4" style="padding:0;background:#0e1621">
-            <div style="padding:56px 18px 18px;display:flex;flex-direction:column;height:100%">
+          <!-- Screen 4: My Trees -->
+          <div class="demo-screen" data-screen="3" onclick="demoGo(0)" style="cursor:pointer;background:#0e1621">
+            <div style="padding:0;display:flex;flex-direction:column;height:100%">
               <div class="ps-title" style="color:#fff">📍 My Trees <span style="font-weight:400;color:rgba(255,255,255,0.4);font-size:12px">(12)</span></div>
-              <div class="ps-tree-item" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div class="ps-tree-icon" style="background:rgba(107,197,173,0.12)">🌳</div>
+              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌳</div>
                 <div style="flex:1">
-                  <div class="ps-tree-name" style="color:#fff">TC-2026-00412</div>
-                  <div class="ps-tree-loc" style="color:rgba(255,255,255,0.35)">📍 Sabang, Palawan</div>
-                  <div class="ps-tree-co2" style="color:var(--teal)">🌿 24.5 kg CO₂/yr</div>
+                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00412</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Sabang, Palawan</div>
+                  <div style="font-size:9px;color:var(--teal)">🌿 24.5 kg CO₂/yr</div>
                 </div>
-                <span class="ps-status verified">Verified</span>
+                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(90,159,212,.1);color:#5A9FD4">Verified</span>
               </div>
-              <div class="ps-tree-item" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div class="ps-tree-icon" style="background:rgba(107,197,173,0.12)">🌴</div>
+              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌴</div>
                 <div style="flex:1">
-                  <div class="ps-tree-name" style="color:#fff">TC-2026-00413</div>
-                  <div class="ps-tree-loc" style="color:rgba(255,255,255,0.35)">📍 Kalibo, Aklan (Boracay)</div>
-                  <div class="ps-tree-co2" style="color:var(--teal)">🌿 31.2 kg CO₂/yr</div>
+                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00413</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Kalibo, Aklan</div>
+                  <div style="font-size:9px;color:var(--teal)">🌿 31.2 kg CO₂/yr</div>
                 </div>
-                <span class="ps-status growing">Growing</span>
+                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(107,197,173,.1);color:var(--teal-dark)">Growing</span>
               </div>
-              <div class="ps-tree-item" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div class="ps-tree-icon" style="background:rgba(107,197,173,0.12)">🌲</div>
+              <div style="display:flex;gap:10px;align-items:center;padding:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:8px">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(107,197,173,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌲</div>
                 <div style="flex:1">
-                  <div class="ps-tree-name" style="color:#fff">TC-2026-00414</div>
-                  <div class="ps-tree-loc" style="color:rgba(255,255,255,0.35)">📍 Silonay, Mindoro</div>
-                  <div class="ps-tree-co2" style="color:var(--teal)">🌿 19.8 kg CO₂/yr</div>
+                  <div style="font-size:11px;font-weight:600;color:#fff">TC-2026-00414</div>
+                  <div style="font-size:9px;color:rgba(255,255,255,0.35)">📍 Silonay, Mindoro</div>
+                  <div style="font-size:9px;color:var(--teal)">🌿 19.8 kg CO₂/yr</div>
                 </div>
-                <span class="ps-status verified">Verified</span>
-              </div>
-              <div class="ps-tree-item" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08)">
-                <div class="ps-tree-icon" style="background:rgba(107,197,173,0.12)">🌳</div>
-                <div style="flex:1">
-                  <div class="ps-tree-name" style="color:#fff">TC-2026-00415</div>
-                  <div class="ps-tree-loc" style="color:rgba(255,255,255,0.35)">📍 El Nido, Palawan</div>
-                  <div class="ps-tree-co2" style="color:var(--teal)">🌿 27.1 kg CO₂/yr</div>
-                </div>
-                <span class="ps-status growing">Growing</span>
+                <span style="display:inline-block;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:600;background:rgba(90,159,212,.1);color:#5A9FD4">Verified</span>
               </div>
               <div style="flex:1"></div>
-              <div class="ps-btn" onclick="event.stopPropagation();demoGo(0)" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
+              <div class="ps-btn" style="margin-bottom:0;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">← Home</div>
             </div>
           </div>
 
@@ -500,11 +509,39 @@ section{position:relative;z-index:1}
             <div class="demo-dot" data-dot="1"></div>
             <div class="demo-dot" data-dot="2"></div>
             <div class="demo-dot" data-dot="3"></div>
-            <div class="demo-dot" data-dot="4"></div>
           </div>
           <div class="tap-hint">TAP TO EXPLORE</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- What You Can Do -->
+<section id="impact" style="padding:100px 60px">
+  <div class="section-label reveal">Your Daily Impact</div>
+  <h2 class="section-title reveal">Every action counts</h2>
+  <p class="section-subtitle reveal">Your lifestyle journal — voice-powered, AI-measured. TreeCodex tracks every sustainable action and turns your daily habits into a real impact portfolio.</p>
+  <div class="impact-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+    <div class="impact-card reveal rd1">
+      <span class="impact-icon">🌳</span>
+      <h3>Plant Trees</h3>
+      <p>Fund GPS-verified trees around the world. Each tree gets a unique ID, photo proof, and CO₂ tracking.</p>
+    </div>
+    <div class="impact-card reveal rd2">
+      <span class="impact-icon">🗑️</span>
+      <h3>Pick Up Trash</h3>
+      <p>Log trash pickups with photos. Track pounds collected. Complete quests and earn XP for keeping your community clean.</p>
+    </div>
+    <div class="impact-card reveal rd3">
+      <span class="impact-icon">♻️</span>
+      <h3>Recycle Plastic</h3>
+      <p>Track every bottle, bag, and container you recycle. See your cumulative impact grow over time.</p>
+    </div>
+    <div class="impact-card reveal rd4">
+      <span class="impact-icon">🚲</span>
+      <h3>Bike & Walk</h3>
+      <p>Log bike rides, walks, and public transit trips. See exactly how much CO₂ you saved versus driving.</p>
     </div>
   </div>
 </section>
@@ -514,18 +551,21 @@ section{position:relative;z-index:1}
 <div class="story-section reveal">
   <div class="story-text">
     <div class="story-num">01</div>
-    <h2>You take a flight.</h2>
-    <p>Manila to Tokyo. 1,880 miles. <span class="hl">0.82 tonnes of CO₂</span> released into the atmosphere in 4 hours.</p>
-    <p>Most people don't think about it. You open TreeCodex and type the route. In 3 seconds, you know exactly what it cost the planet — calculated from <span class="hl-blue">ICAO-certified data across 30,000+ routes</span>.</p>
+    <h2>Track your daily impact.</h2>
+    <p>Biked to work? <span class="hl">3.2 kg CO₂ saved.</span> Picked up trash at the park? <span class="hl">+50 XP.</span> Had a plant-based lunch? That's <span class="hl-blue">2.5 kg less carbon</span> than a beef meal.</p>
+    <p>TreeCodex turns every sustainable action into measurable impact. Log by voice, text, or photo. The app tracks trees planted, trash collected, plastic recycled, steps walked, and carbon saved — <span class="hl">all in one place.</span></p>
   </div>
   <div class="story-visual">
     <div class="story-card">
-      <span class="emoji-lg">✈️</span>
-      <h4>MNL → NRT</h4>
-      <div class="meta">Economy · 4h 15m · 1,880 mi</div>
-      <div class="big-num">0.82t CO₂</div>
-      <div class="meta">That's 41 mangrove trees needed to offset in 1 year</div>
-      <span class="tag tag-warm">High Impact Flight</span>
+      <span class="emoji-lg">📊</span>
+      <h4>Today's Impact</h4>
+      <div class="meta">3 actions logged</div>
+      <div style="display:flex;gap:12px;margin:14px 0">
+        <div style="flex:1;text-align:center"><div class="big-num" style="font-size:20px;margin:4px 0">5.7 kg</div><div class="meta" style="margin:0">CO₂ Saved</div></div>
+        <div style="flex:1;text-align:center"><div class="big-num" style="font-size:20px;margin:4px 0">2 lbs</div><div class="meta" style="margin:0">Trash</div></div>
+        <div style="flex:1;text-align:center"><div class="big-num" style="font-size:20px;margin:4px 0">4</div><div class="meta" style="margin:0">Bottles</div></div>
+      </div>
+      <span class="tag tag-live">7 Day Streak</span>
     </div>
   </div>
 </div>
@@ -534,14 +574,14 @@ section{position:relative;z-index:1}
 <div class="story-section reverse reveal">
   <div class="story-text">
     <div class="story-num">02</div>
-    <h2>You fund a real tree.</h2>
-    <p>Not a vague donation. You pick a project — <span class="hl">a mangrove restoration in Sabang, Palawan</span>, part of the UNESCO World Heritage buffer zone. The price? Set by the NGO. Transparent. No middleman markup.</p>
-    <p>Your money splits: <span class="hl-blue">90% goes directly to the NGO and their field team</span> — the people doing the actual work. Only 10% sustains TreeCodex as a platform. Field planters are paid <span class="hl">20% above local market wages</span>, because fair pay means better forests.</p>
+    <h2>Fund a real tree.</h2>
+    <p>Not a vague donation. You pick a project — <span class="hl">a reforestation project in Sabang, Palawan</span>, part of the UNESCO World Heritage buffer zone. The price? Set by the NGO. Transparent. No middleman markup.</p>
+    <p>Your money splits: <span class="hl-blue">90% goes directly to the NGO and their field team</span>. Only 10% sustains TreeCodex. Farmers are paid <span class="hl">20% above local market wages</span>, because fair pay means better forests.</p>
   </div>
   <div class="story-visual">
     <div class="story-card">
       <span class="emoji-lg">🌳</span>
-      <h4>Sabang Mangrove Forest</h4>
+      <h4>Sabang Reforestation</h4>
       <div class="meta">📍 Puerto Princesa, Palawan · MIMAROPA Region</div>
       <div class="progress-wrap">
         <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-faint);margin-bottom:6px"><span>4,812 / 10,000 trees</span><span>48%</span></div>
@@ -558,15 +598,15 @@ section{position:relative;z-index:1}
 <div class="story-section reveal">
   <div class="story-text">
     <div class="story-num">03</div>
-    <h2>A planter puts it in the ground.</h2>
-    <p>Meet the person who actually plants your tree. They're part of the NGO's field team — <span class="hl">paid 20% above local market wages</span> because fair compensation creates sustainable reforestation. They're assigned the job only after your tree is 100% funded.</p>
-    <p>They walk to the GPS coordinates along the coast of Palawan, plant the Rhizophora propagule into the mudflat, then open TreeCodex and <span class="hl-blue">take a GPS-tagged photo</span>. The app captures exact coordinates, timestamp, and photo. No faking it. The proof goes to the NGO for verification.</p>
+    <h2>A farmer puts it in the ground.</h2>
+    <p>Meet the person who actually plants your tree. They're part of the NGO's field team — <span class="hl">paid 20% above local market wages</span> because fair compensation creates sustainable reforestation.</p>
+    <p>They walk to the GPS coordinates along the coast of Palawan, plant the Rhizophora propagule into the mudflat, then open TreeCodex and <span class="hl-blue">take a GPS-tagged photo</span>. The app captures exact coordinates, timestamp, and photo. No faking it.</p>
   </div>
   <div class="story-visual">
     <div class="story-card">
       <span class="emoji-lg">👩‍🌾</span>
       <h4>Proof Submission</h4>
-      <div class="meta">Planter: Maria L. · Batch #2847</div>
+      <div class="meta">Farmer: Maria L. · Batch #2847</div>
       <div class="proof-box">
         <div class="proof-line">📍 10.1935°N, 118.8947°E</div>
         <div class="proof-line">📷 3 photos captured</div>
@@ -583,8 +623,8 @@ section{position:relative;z-index:1}
   <div class="story-text">
     <div class="story-num">04</div>
     <h2>Verified. Yours forever.</h2>
-    <p>The NGO reviews the GPS proof, checks the photo, approves it. <span class="hl">The field team gets paid — 90% of your contribution stays with the NGO and their planters</span>. Your tree gets a permanent unique ID: <span class="hl-blue">TC-2026-00412</span>.</p>
-    <p>It shows up in your Tree Catalog — a visual portfolio of every tree you've funded. Tap any tree to see its GPS coordinates, photo history, CO₂ sequestration data, and every donor who co-funded it. Share it with a public URL anyone can visit.</p>
+    <p>The NGO reviews the GPS proof, checks the photo, approves it. <span class="hl">The field team gets paid</span>. Your tree gets a permanent unique ID: <span class="hl-blue">TC-2026-00412</span>.</p>
+    <p>It shows up in your Tree Catalog — a visual portfolio of every tree you've funded. Tap any tree to see its GPS coordinates, photo history, CO₂ data, and every donor who co-funded it. Share it with a public URL anyone can visit.</p>
   </div>
   <div class="story-visual">
     <div class="story-card">
@@ -607,37 +647,44 @@ section{position:relative;z-index:1}
 <!-- Live Feed -->
 <section id="live" style="padding:100px 60px">
   <div class="section-label reveal">Happening Now</div>
-  <h2 class="section-title reveal">Real planters. Real-time.</h2>
-  <p class="section-subtitle reveal">Every action below is from a real person in the TreeCodex ecosystem across the Philippines.</p>
+  <h2 class="section-title reveal">Real people. Real impact.</h2>
+  <p class="section-subtitle reveal">Every action below is from a real person in the TreeCodex community.</p>
   <div style="max-width:480px;margin:0 auto" class="reveal">
     <div class="story-card" style="width:100%">
       <div class="live-label"><span class="live-dot"></span> Live Activity Feed</div>
       <div class="feed-item">
-        <div class="feed-avatar planter">👩‍🌾</div>
+        <div class="feed-avatar farmer">👩‍🌾</div>
         <div>
           <div class="feed-action"><strong>Maria L.</strong> planted 5 trees in Sabang, Palawan</div>
           <div class="feed-time">2 minutes ago · GPS verified</div>
         </div>
       </div>
       <div class="feed-item">
-        <div class="feed-avatar user">👤</div>
+        <div class="feed-avatar eco">🗑️</div>
         <div>
-          <div class="feed-action"><strong>Sarah K.</strong> offset a MNL→SIN flight (0.42t CO₂)</div>
-          <div class="feed-time">8 minutes ago</div>
+          <div class="feed-action"><strong>Jake M.</strong> collected 3 lbs of trash at Venice Beach</div>
+          <div class="feed-time">5 minutes ago · Photo verified</div>
+        </div>
+      </div>
+      <div class="feed-item">
+        <div class="feed-avatar user">🚲</div>
+        <div>
+          <div class="feed-action"><strong>Sarah K.</strong> biked to work — saved 4.1 kg CO₂</div>
+          <div class="feed-time">12 minutes ago</div>
+        </div>
+      </div>
+      <div class="feed-item">
+        <div class="feed-avatar eco">♻️</div>
+        <div>
+          <div class="feed-action"><strong>Aisha R.</strong> recycled 8 plastic bottles</div>
+          <div class="feed-time">18 minutes ago</div>
         </div>
       </div>
       <div class="feed-item">
         <div class="feed-avatar ngo">🌍</div>
         <div>
-          <div class="feed-action"><strong>Bakhawan Eco-Park</strong> verified batch #2841 — 120 trees near Boracay</div>
+          <div class="feed-action"><strong>Bakhawan Eco-Park</strong> verified batch #2841 — 120 trees</div>
           <div class="feed-time">23 minutes ago</div>
-        </div>
-      </div>
-      <div class="feed-item">
-        <div class="feed-avatar planter">👨‍🌾</div>
-        <div>
-          <div class="feed-action"><strong>Jun R.</strong> submitted proof for 8 trees in Silonay, Mindoro</div>
-          <div class="feed-time">41 minutes ago · Awaiting review</div>
         </div>
       </div>
       <div class="feed-item">
@@ -655,9 +702,10 @@ section{position:relative;z-index:1}
 <section class="stats">
   <div class="stats-container">
     <div class="stat reveal rd1"><div class="stat-number" data-target="50000">0</div><div class="stat-label">Trees Planted</div></div>
-    <div class="stat reveal rd2"><div class="stat-number" data-target="1200">0</div><div class="stat-label">Tonnes CO₂ Offset</div></div>
-    <div class="stat reveal rd3"><div class="stat-number" data-target="340">0</div><div class="stat-label">Active Planters</div></div>
-    <div class="stat reveal rd4"><div class="stat-number" data-target="47">0</div><div class="stat-label">Philippine Provinces</div></div>
+    <div class="stat reveal rd2"><div class="stat-number" data-target="8400">0</div><div class="stat-label">lbs Trash Collected</div></div>
+    <div class="stat reveal rd3"><div class="stat-number" data-target="3200">0</div><div class="stat-label">lbs Plastic Recycled</div></div>
+    <div class="stat reveal rd4"><div class="stat-number" data-target="1200">0</div><div class="stat-label">Tonnes CO₂ Offset</div></div>
+    <div class="stat reveal rd5"><div class="stat-number" data-target="12000">0</div><div class="stat-label">Active Users</div></div>
   </div>
 </section>
 
@@ -665,11 +713,11 @@ section{position:relative;z-index:1}
 <section class="roles" id="roles">
   <div class="section-label reveal">For Everyone</div>
   <h2 class="section-title reveal">Five roles, one ecosystem</h2>
-  <p class="section-subtitle reveal">Whether you fly, plant, verify, manage, or advocate — there's a place for you.</p>
+  <p class="section-subtitle reveal">Whether you walk, plant, verify, manage, or advocate — there's a place for you.</p>
   <div class="roles-grid">
-    <div class="role-card reveal rd1" style="--rc:var(--teal)"><span class="role-emoji">🌱</span><h3>User</h3><p>Track your carbon. Fund trees. Build your forest catalog.</p></div>
-    <div class="role-card reveal rd2" style="--rc:var(--green)"><span class="role-emoji">👩‍🌾</span><h3>Planter</h3><p>Plant trees. Submit GPS proof. Get paid 20% above local wages.</p></div>
-    <div class="role-card reveal rd3" style="--rc:var(--blue)"><span class="role-emoji">🌍</span><h3>NGO</h3><p>Create projects. Manage planters. Verify proof. Receive funds.</p></div>
+    <div class="role-card reveal rd1" style="--rc:var(--teal)"><span class="role-emoji">🌱</span><h3>User</h3><p>Track impact. Plant trees. Pick up trash. Build your green portfolio.</p></div>
+    <div class="role-card reveal rd2" style="--rc:var(--green)"><span class="role-emoji">👩‍🌾</span><h3>Farmer</h3><p>Plant trees. Submit GPS proof. Get paid 20% above local wages.</p></div>
+    <div class="role-card reveal rd3" style="--rc:var(--blue)"><span class="role-emoji">🌍</span><h3>NGO</h3><p>Create projects. Manage farmers. Verify proof. Receive funds.</p></div>
     <div class="role-card reveal rd4" style="--rc:var(--blue-light)"><span class="role-emoji">🏢</span><h3>Enterprise</h3><p>Bulk offset. Team management. ESG reporting. Tree catalog.</p></div>
     <div class="role-card reveal rd5" style="--rc:var(--gold)"><span class="role-emoji">⭐</span><h3>Ambassador</h3><p>Run campaigns. Build tree pools. Earn referral commission.</p></div>
   </div>
@@ -678,9 +726,9 @@ section{position:relative;z-index:1}
 <!-- CTA -->
 <section class="cta" id="download">
   <div class="cta-box reveal">
-    <h2>Your next flight is someone's next tree.</h2>
-    <p>Join the ecosystem. Track carbon. 90% of every dollar goes to NGOs and their field teams — paid 20% above local wages. Only 10% sustains the platform.</p>
-    <div class="store-buttons">
+    <h2>Your daily habits are the planet's future.</h2>
+    <p>Plant trees. Pick up trash. Recycle. Walk more. Every action tracked. Every impact measured. 90% of tree funding goes to NGOs and farmers.</p>
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative">
       <a href="mailto:uynghiem@earthsama.com?subject=TreeCodex%20Early%20Access%20Request&body=Hi%2C%20I'd%20like%20to%20request%20early%20access%20to%20TreeCodex." class="btn-primary" style="font-size:17px;padding:18px 44px">Request Early Access →</a>
     </div>
   </div>
@@ -690,10 +738,10 @@ section{position:relative;z-index:1}
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-logo-wrap"><img src="logo.png" alt="TreeCodex"><span>TreeCodex</span></div>
-      <p>The Net Zero Challenge. 90% to NGOs & field teams. Fair wages. Real-time GPS verification. No blockchain. No vague promises.</p>
+      <div class="footer-logo-wrap"><img src="logo.png" alt="TreeCodex"></div>
+      <p>Live Green. Track Impact. Plant trees, pick up trash, recycle, bike, walk. Every action measured. 90% of tree funding to NGOs & farmers.</p>
     </div>
-    <div class="footer-col"><h4>Product</h4><a href="#story">How It Works</a><a href="#live">Live Feed</a><a href="#roles">Roles</a><a href="#download">Early Access</a></div>
+    <div class="footer-col"><h4>Product</h4><a href="#impact">Your Impact</a><a href="#story">How It Works</a><a href="#roles">Roles</a><a href="#download">Early Access</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
     <div class="footer-col"><h4>Contact</h4><a href="contact.html">Get in Touch</a><a href="mailto:uynghiem@earthsama.com">uynghiem@earthsama.com</a></div>
   </div>
@@ -701,13 +749,12 @@ section{position:relative;z-index:1}
 </footer>
 
 <script>
-// Particles — blue-white twinkling stars
+// Particles
 const c=document.getElementById('particles'),x=c.getContext('2d');let pts=[];
 function rc(){c.width=innerWidth;c.height=innerHeight}rc();addEventListener('resize',rc);
 class P{constructor(){this.r()}r(){this.x=Math.random()*c.width;this.y=Math.random()*c.height;this.s=Math.random()*1.8+.2;this.sy=Math.random()*.15+.02;this.sx=(Math.random()-.5)*.1;this.o=Math.random()*.5+.1;this.ts=Math.random()*.02+.003;this.to=Math.random()*Math.PI*2;this.color=Math.random()>.7?'158,195,239':'200,213,230'}u(){this.y-=this.sy;this.x+=this.sx;if(this.y<-5){this.y=c.height+5;this.x=Math.random()*c.width}}d(){const t=Math.sin(Date.now()*this.ts+this.to)*.4+.6;x.beginPath();x.arc(this.x,this.y,this.s,0,Math.PI*2);x.fillStyle=`rgba(${this.color},${this.o*t})`;x.fill()}}
 for(let i=0;i<140;i++)pts.push(new P);
 (function a(){x.clearRect(0,0,c.width,c.height);pts.forEach(p=>{p.u();p.d()});requestAnimationFrame(a)})();
-// Shooting stars
 function shootingStar(){const y=Math.random()*c.height*.5;const startX=Math.random()*c.width;const len=80+Math.random()*120;const speed=4+Math.random()*4;let pos=0;const angle=.3+Math.random()*.4;function draw(){x.beginPath();const px=startX+pos;const py=y+pos*angle;x.moveTo(px,py);x.lineTo(px-len*.3,py-len*.3*angle);const g=x.createLinearGradient(px,py,px-len*.3,py-len*.3*angle);g.addColorStop(0,'rgba(158,195,239,0.6)');g.addColorStop(1,'rgba(158,195,239,0)');x.strokeStyle=g;x.lineWidth=1.5;x.stroke();pos+=speed;if(pos<c.width+200)requestAnimationFrame(draw)}draw();setTimeout(shootingStar,3000+Math.random()*8000)}
 setTimeout(shootingStar,2000);
 
@@ -719,170 +766,7 @@ document.querySelectorAll('.stat-number').forEach(el=>co.observe(el));
 addEventListener('scroll',()=>{const s=scrollY;document.querySelectorAll('.floating-element').forEach((el,i)=>{el.style.transform=`translateY(${s*(.015+i*.012)}px)`});document.querySelectorAll('.glow-orb').forEach((el,i)=>{el.style.transform=`translateY(${s*(.02+i*.008)}px)`})});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
 
-// ── Apl De Ap Chat Widget ──
-(function(){
-const expressions={idle:'characters/Apldeap_Exp1.png',greeting:'characters/Apldeap_Exp3.png',thinking:'characters/Apldeap_Exp9.png',pointing:'characters/Apldeap_Exp7.png',excited:'characters/Apldeap_Exp6.png',confused:'characters/Apldeap_Exp8.png',cool:'characters/Apldeap_Exp10.png'};
-
-const qaData=[
-  {q:/what is treecodex|what does treecodex do/i,a:"TreeCodex connects you directly to planters on the ground in the Philippines. You calculate your carbon footprint, fund a GPS-verified mangrove tree, and watch a real person plant it — with photo proof and coordinates you can actually visit! 🌱",exp:'excited'},
-  {q:/how.*(work|plant|tree)/i,a:"Simple! 1) Calculate your flight or activity carbon. 2) Pick a mangrove project in Palawan or Boracay. 3) Fund a tree. 4) A planter puts it in the ground and submits GPS proof. 5) The NGO verifies it. 6) Your tree gets a permanent ID and shows up in your catalog forever! 📍",exp:'pointing'},
-  {q:/money|cost|price|pay|split/i,a:"90% of your payment goes directly to the NGO and their field team — the people doing the actual work. Planters are paid 20% above local market wages. Only 10% keeps TreeCodex running. No middlemen, no hidden fees. Trees start at around $3.50-$4.20 each! 💚",exp:'cool'},
-  {q:/where|country|location|philippines|palawan|boracay/i,a:"We're planting in the Philippines! Three amazing locations: Sabang Mangrove Forest in Palawan (UNESCO buffer zone), Bakhawan Eco-Park near Boracay (220 hectares!), and Silonay Conservation Area in Mindoro. All real, GPS-verified projects! 🇵🇭",exp:'excited'},
-  {q:/ngo|partner|organization/i,a:"We work with verified NGOs who manage the planting projects and field teams. NGOs set their own tree prices, manage planters, and verify every proof submission. Want to partner? Email uynghiem@earthsama.com! 🌍",exp:'pointing'},
-  {q:/enterprise|company|business|esg|bulk/i,a:"Companies can bulk-purchase trees for ESG reporting, team offsetting, and sustainability goals. Each tree is individually tracked with GPS and CO₂ data — perfect for compliance reports. Hit up uynghiem@earthsama.com for enterprise plans! 🏢",exp:'cool'},
-  {q:/carbon|co2|emission|flight|offset/i,a:"We use ICAO-certified data covering 30,000+ flight routes and 4 cabin classes. Enter your route, get your CO₂ impact in seconds. Then offset it by funding real mangrove trees — they sequester 3-5x more carbon than regular forests! ✈️🌿",exp:'thinking'},
-  {q:/app|download|ios|android|when/i,a:"We're in development right now and launching soon! Want early access? Email uynghiem@earthsama.com with 'Early Access' in the subject and you'll be first to try it! 🚀",exp:'excited'},
-  {q:/hi|hello|hey|kumusta|mabuhay|sup/i,a:"Kumusta ka! Welcome to TreeCodex! I'm Apl — ask me anything about how we're planting real mangrove trees in the Philippines. What do you want to know? 🤙",exp:'greeting'},
-  {q:/thank|thanks|salamat/i,a:"Salamat din! Happy to help. If you want to get involved, just email uynghiem@earthsama.com. Together we can make a real difference — one tree at a time! 🌳✨",exp:'greeting'},
-  {q:/blockchain|crypto|nft|token/i,a:"No blockchain, no crypto, no NFTs. Just real trees, real planters, real GPS coordinates. We keep it simple — fiat payments via Stripe, transparent 90/10 split. The planet doesn't need another token, it needs more trees! 🌱",exp:'cool'},
-];
-
-const widget=document.createElement('div');
-widget.id='apl-chat';
-widget.innerHTML=`
-<style>
-#apl-chat{position:fixed;bottom:20px;right:20px;z-index:999;font-family:'Inter',sans-serif}
-#apl-toggle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a2a3a,#0e1e2e);border:2px solid rgba(107,197,173,.2);cursor:pointer;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4),0 0 20px rgba(107,197,173,.1);transition:transform .3s,box-shadow .3s;position:relative}
-#apl-toggle:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(0,0,0,.5),0 0 30px rgba(107,197,173,.2)}
-#apl-toggle img{width:100%;height:100%;object-fit:cover;object-position:top}
-#apl-toggle .badge{position:absolute;top:2px;right:2px;width:10px;height:10px;background:#ef6c4d;border-radius:50%;border:2px solid #0e1e2e;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
-#apl-hint{position:absolute;bottom:80px;right:0;background:rgba(20,24,40,.95);border:1px solid rgba(107,197,173,.15);border-radius:16px 16px 4px 16px;padding:10px 16px;font-size:13px;color:rgba(255,255,255,.8);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:hintBounce 2s ease-in-out infinite;pointer-events:none}
-@keyframes hintBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-#apl-panel{display:none;position:absolute;bottom:84px;right:0;width:360px;max-height:500px;background:rgba(12,16,28,.97);border:1px solid rgba(107,197,173,.12);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden;flex-direction:column;backdrop-filter:blur(20px)}
-#apl-panel.open{display:flex}
-#apl-header{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.06)}
-#apl-header img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(107,197,173,.2)}
-#apl-header .info{flex:1}
-#apl-header .name{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:#fff}
-#apl-header .status{font-size:11px;color:#6BC5AD}
-#apl-close{background:none;border:none;color:rgba(255,255,255,.4);font-size:20px;cursor:pointer;padding:4px 8px}
-#apl-close:hover{color:#fff}
-#apl-messages{flex:1;overflow-y:auto;padding:16px 20px;max-height:320px}
-.apl-msg{display:flex;gap:8px;margin-bottom:16px;animation:msgIn .3s ease}
-@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.apl-msg.bot .avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0}
-.apl-msg .bubble{max-width:260px;padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.6}
-.apl-msg.bot .bubble{background:rgba(107,197,173,.1);border:1px solid rgba(107,197,173,.1);color:rgba(255,255,255,.8);border-top-left-radius:4px}
-.apl-msg.user{flex-direction:row-reverse}
-.apl-msg.user .bubble{background:rgba(90,159,212,.15);border:1px solid rgba(90,159,212,.1);color:rgba(255,255,255,.8);border-top-right-radius:4px}
-#apl-suggestions{padding:0 20px 12px;display:flex;flex-wrap:wrap;gap:6px}
-.apl-sug{padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;font-size:11px;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s}
-.apl-sug:hover{background:rgba(107,197,173,.1);border-color:rgba(107,197,173,.2);color:rgba(255,255,255,.8)}
-#apl-input-wrap{padding:12px 16px;border-top:1px solid rgba(255,255,255,.06);position:relative}
-#apl-input{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:10px 48px 10px 16px;color:#fff;font-size:13px;font-family:'Inter',sans-serif;outline:none}
-#apl-input:focus{border-color:rgba(107,197,173,.3)}
-#apl-input::placeholder{color:rgba(255,255,255,.25)}
-#apl-send{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#6BC5AD,#5EBE9A);border:none;color:#050510;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s;position:absolute;right:21px;top:50%;transform:translateY(-50%);z-index:2}
-#apl-send:hover{transform:translateY(-50%) scale(1.1)}
-@media(max-width:480px){#apl-panel{width:calc(100vw - 32px);right:-4px;bottom:80px}}
-</style>
-
-<div id="apl-hint">Ask me about TreeCodex! 🌱</div>
-<div id="apl-toggle" onclick="aplToggle()">
-  <img src="characters/Apldeap_Exp3.png" id="apl-toggle-img" alt="Chat with Apl">
-  <div class="badge"></div>
-</div>
-<div id="apl-panel">
-  <div id="apl-header">
-    <img src="characters/Apldeap_Exp3.png" id="apl-avatar" alt="Apl">
-    <div class="info"><div class="name">Apl De Ap</div><div class="status">Online — TreeCodex Guide</div></div>
-    <button id="apl-close" onclick="aplToggle()">×</button>
-  </div>
-  <div id="apl-messages"></div>
-  <div id="apl-suggestions"></div>
-  <div id="apl-input-wrap">
-    <input id="apl-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')aplSend()">
-    <button id="apl-send" onclick="aplSend()">↑</button>
-  </div>
-</div>
-`;
-document.body.appendChild(widget);
-
-let aplOpen=false;
-const msgs=document.getElementById('apl-messages');
-const sugs=document.getElementById('apl-suggestions');
-const hint=document.getElementById('apl-hint');
-
-// Hide hint after 5s
-setTimeout(()=>{if(hint)hint.style.display='none'},8000);
-
-function aplToggle(){
-  aplOpen=!aplOpen;
-  document.getElementById('apl-panel').classList.toggle('open',aplOpen);
-  if(hint)hint.style.display='none';
-  document.querySelector('#apl-toggle .badge').style.display='none';
-  if(aplOpen&&msgs.children.length===0){
-    aplBotMsg("Kumusta! I'm Apl — your guide to TreeCodex. Ask me anything about how we're planting real mangrove trees in the Philippines! 🌱🇵🇭",'greeting');
-    showSuggestions(['How does it work?','Where do you plant?','Where does my money go?','Can I get early access?']);
-  }
-}
-window.aplToggle=aplToggle;
-
-function aplBotMsg(text,exp){
-  const img=expressions[exp]||expressions.idle;
-  document.getElementById('apl-avatar').src=img;
-  document.getElementById('apl-toggle-img').src=img;
-  const d=document.createElement('div');
-  d.className='apl-msg bot';
-  d.innerHTML='<img class="avatar" src="'+img+'" alt="Apl"><div class="bubble">'+text+'</div>';
-  msgs.appendChild(d);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-
-function aplUserMsg(text){
-  const d=document.createElement('div');
-  d.className='apl-msg user';
-  d.innerHTML='<div class="bubble">'+text+'</div>';
-  msgs.appendChild(d);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-
-function showSuggestions(items){
-  sugs.innerHTML='';
-  items.forEach(s=>{
-    const b=document.createElement('button');
-    b.className='apl-sug';
-    b.textContent=s;
-    b.onclick=()=>{document.getElementById('apl-input').value=s;aplSend()};
-    sugs.appendChild(b);
-  });
-}
-
-function aplSend(){
-  const input=document.getElementById('apl-input');
-  const q=input.value.trim();
-  if(!q)return;
-  input.value='';
-  aplUserMsg(q);
-  sugs.innerHTML='';
-
-  // Typing indicator
-  const typing=document.createElement('div');
-  typing.className='apl-msg bot';
-  typing.innerHTML='<img class="avatar" src="'+expressions.thinking+'" alt="Apl"><div class="bubble" style="opacity:.5">Thinking...</div>';
-  msgs.appendChild(typing);
-  document.getElementById('apl-avatar').src=expressions.thinking;
-  msgs.scrollTop=msgs.scrollHeight;
-
-  setTimeout(()=>{
-    msgs.removeChild(typing);
-    let matched=false;
-    for(const item of qaData){
-      if(item.q.test(q)){aplBotMsg(item.a,item.exp);matched=true;break;}
-    }
-    if(!matched){
-      aplBotMsg("Great question! I don't have a specific answer for that yet, but you can reach the team directly at uynghiem@earthsama.com — they'll get back to you fast! In the meantime, want to know how TreeCodex works? 🤔",'confused');
-      showSuggestions(['How does it work?','Where does my money go?','Tell me about the app']);
-    } else {
-      showSuggestions(['How does it work?','Where do you plant?','Tell me about pricing','Can I get early access?']);
-    }
-  },800+Math.random()*600);
-}
-window.aplSend=aplSend;
-})();
-
-// ── Interactive phone demo ──
+// Interactive phone demo
 let currentScreen=0;
 function demoGo(n){
   document.querySelectorAll('.demo-screen').forEach(s=>{s.classList.remove('active')});
@@ -890,13 +774,11 @@ function demoGo(n){
   document.querySelectorAll('.demo-dot').forEach(d=>d.classList.remove('active'));
   document.querySelector(`.demo-dot[data-dot="${n}"]`).classList.add('active');
   currentScreen=n;
-  // Hide tap hint after first interaction
   const hint=document.querySelector('.tap-hint');
   if(hint)hint.style.display='none';
 }
-// Auto-play demo every 4 seconds if user hasn't interacted
 let autoDemo;let userTouched=false;
-const demoSequence=[0,1,2,3,4,0];
+const demoSequence=[0,1,2,3,0];
 let demoStep=0;
 function startAutoDemo(){
   autoDemo=setInterval(()=>{
@@ -906,7 +788,6 @@ function startAutoDemo(){
   },3500);
 }
 document.getElementById('demoWrap').addEventListener('click',()=>{userTouched=true;clearInterval(autoDemo)},{once:true});
-// Start auto-demo after 3s
 setTimeout(startAutoDemo,3000);
 </script>
 </body>
